@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaLinkedin, FaBlog } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -17,10 +18,12 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/">
-                <img
+                <Image
                   className="h-12 w-auto"
                   src="/KS Logo.jpeg"
                   alt="Khushi Shah"
+                  width={48}
+                  height={48}
                 />
               </Link>
             </div>

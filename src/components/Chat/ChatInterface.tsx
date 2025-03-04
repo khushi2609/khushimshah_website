@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChatMessage, ChatOption, ChatPrompt, BotPersona } from '@/types/chat';
 import { v4 as uuidv4 } from 'uuid';
 import { chatPrompts } from '@/data/chatData';
+import Image from 'next/image';
 
 interface ChatInterfaceProps {
   persona: BotPersona;
@@ -76,9 +77,11 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
     <div className="flex flex-col h-screen max-w-4xl mx-auto bg-background shadow-lg">
       <div className="flex items-center p-4 border-b border-primary">
         <div className="relative">
-          <img
+          <Image
             src={persona.avatar}
             alt={persona.name}
+            width={48}
+            height={48}
             className="w-12 h-12 rounded-full mr-3 floating"
           />
         </div>

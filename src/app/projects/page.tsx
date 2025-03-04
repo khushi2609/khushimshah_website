@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface Project {
   id: string;
@@ -224,10 +225,12 @@ export default function Projects() {
             <div className="md:flex">
               {project.image && (
                 <div className="md:flex-shrink-0">
-                  <img
+                  <Image
                     className="h-48 w-full md:w-48 object-cover"
                     src={project.image}
                     alt={project.title}
+                    width={192}
+                    height={192}
                   />
                 </div>
               )}

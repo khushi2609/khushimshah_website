@@ -69,7 +69,7 @@ export default function Home() {
             <FaArrowRight className="inline ml-2 transform group-hover:translate-x-1 transition-transform" />
           </h2>
           <p className="text-primary">
-            Embark on a journey through my mind! This blog is a space where I reflect on life, share my passions, and explore the ever-evolving landscape of information security. From personal anecdotes to technical insights, there's something for everyone.
+            Embark on a journey through my mind! This blog is a space where I reflect on life, share my passions, and explore the ever-evolving landscape of information security. From personal anecdotes to technical insights, there&apos;s something for everyone.
           </p>
         </Link>
 
@@ -116,7 +116,7 @@ export default function Home() {
               Connect with Me
             </h2>
             <p className="text-xl text-primary max-w-3xl mx-auto">
-              Let's collaborate on making the digital world more secure and privacy-conscious.
+              Let&apos;s collaborate on making the digital world more secure and privacy-conscious.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function Home() {
           <FaArrowRight className="ml-2" />
         </Link>
         <p className="mt-2 text-sm text-gray-600">
-          Have questions? Let Cypher guide you through Khushi's cybersecurity journey
+          Have questions? Let Cypher guide you through Khushi&apos;s cybersecurity journey
         </p>
       </div>
     </main>
