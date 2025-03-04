@@ -139,7 +139,7 @@ const experiences: Experience[] = [
   }
 ];
 
-export default function ProfessionalJourney() {
+export default function InAction() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   
   const categories = [
@@ -153,126 +153,127 @@ export default function ProfessionalJourney() {
     : experiences.filter(exp => exp.category === selectedCategory);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-accent mb-4">
-          Professional Journey
-        </h1>
-        <p className="text-xl text-primary max-w-3xl mx-auto">
-          Combining hands-on industry experience with active involvement in the InfoSec community
-          to drive innovation and knowledge sharing in cybersecurity.
-        </p>
-      </div>
-
-      {/* Category Filter */}
-      <div className="flex justify-center gap-4 mb-8 flex-wrap">
-        {categories.map(category => (
-          <button
-            key={category.id}
-            onClick={() => setSelectedCategory(category.id)}
-            className={`px-4 py-2 rounded-md transition-colors ${
-              selectedCategory === category.id
-                ? 'bg-accent text-white'
-                : 'bg-white text-primary hover:bg-primary/10'
-            }`}
-          >
-            {category.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Experience Cards */}
-      <div className="grid grid-cols-1 gap-8">
-        {filteredExperiences.map(experience => (
-          <div
-            key={experience.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-          >
-            <div className={`${experience.id === 'jmrc-project' || experience.id === 'defcon-involvement' ? 'grid grid-cols-1 md:grid-cols-2 gap-0' : ''}`}>
-              {/* Content Section */}
-              <div className="p-8">
-                <div className="mb-6">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-2xl font-bold text-accent">
-                      {experience.title}
-                    </h2>
-                    <span className={`px-3 py-1 rounded-full text-sm ${
-                      experience.category === 'work' 
-                        ? 'bg-blue-100 text-blue-800' 
-                        : 'bg-purple-100 text-purple-800'
-                    }`}>
-                      {experience.category === 'work' ? 'Work Experience' : 'Community'}
-                    </span>
-                  </div>
-                  <div className="text-lg font-semibold text-primary mt-1">
-                    {experience.company}
-                  </div>
-                  <div className="flex items-center text-gray-600 mt-2">
-                    <span className="mr-4">{experience.date}</span>
-                    <span>{experience.location}</span>
-                  </div>
-                </div>
-                
-                <p className="text-gray-600 mb-6">
-                  {experience.description}
-                </p>
-
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-primary mb-3">
-                    Key Achievements
-                  </h3>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    {experience.achievements.map((achievement, index) => (
-                      <li key={index}>{achievement}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-primary mb-3">
-                    Technologies & Skills
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {experience.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Image Section */}
-              {experience.image && (
-                <div className="relative w-full h-full order-first md:order-last">
-                  <Image
-                    src={experience.image}
-                    alt={`${experience.title} image`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    quality={100}
-                    priority
-                    className="object-cover"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* No Experience Message */}
-      {filteredExperiences.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-gray-600">
-            No experiences found in this category. Check back later for updates!
+    <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-accent mb-4">
+            Professional Journey
+          </h1>
+          <p className="text-xl text-primary max-w-3xl mx-auto">
+          Growth and engagement: A visual narrative of my journey through the cybersecurity landscape.
           </p>
         </div>
-      )}
-    </div>
+
+        {/* Category Filter */}
+        <div className="flex justify-center gap-4 mb-8 flex-wrap">
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-4 py-2 rounded-md transition-colors ${
+                selectedCategory === category.id
+                  ? 'bg-accent text-white'
+                  : 'bg-white text-primary hover:bg-primary/10'
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Experience Cards */}
+        <div className="grid grid-cols-1 gap-8">
+          {filteredExperiences.map(experience => (
+            <div
+              key={experience.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className={`${experience.id === 'jmrc-project' || experience.id === 'defcon-involvement' ? 'grid grid-cols-1 md:grid-cols-2 gap-0' : ''}`}>
+                {/* Content Section */}
+                <div className="p-8">
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-2xl font-bold text-accent">
+                        {experience.title}
+                      </h2>
+                      <span className={`px-3 py-1 rounded-full text-sm ${
+                        experience.category === 'work' 
+                          ? 'bg-blue-100 text-blue-800' 
+                          : 'bg-purple-100 text-purple-800'
+                      }`}>
+                        {experience.category === 'work' ? 'Work Experience' : 'Community'}
+                      </span>
+                    </div>
+                    <div className="text-lg font-semibold text-primary mt-1">
+                      {experience.company}
+                    </div>
+                    <div className="flex items-center text-gray-600 mt-2">
+                      <span className="mr-4">{experience.date}</span>
+                      <span>{experience.location}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {experience.description}
+                  </p>
+
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-primary mb-3">
+                      Key Achievements
+                    </h3>
+                    <ul className="list-disc list-inside text-gray-600 space-y-2">
+                      {experience.achievements.map((achievement, index) => (
+                        <li key={index}>{achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-primary mb-3">
+                      Technologies & Skills
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image Section */}
+                {experience.image && (
+                  <div className="relative w-full h-full order-first md:order-last">
+                    <Image
+                      src={experience.image}
+                      alt={`${experience.title} image`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={100}
+                      priority
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* No Experience Message */}
+        {filteredExperiences.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-600">
+              No experiences found in this category. Check back later for updates!
+            </p>
+          </div>
+        )}
+      </div>
+    </main>
   );
 } 

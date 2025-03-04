@@ -192,176 +192,178 @@ function SkillBar({ name, level, description, context }: Skill) {
 
 export default function Skills() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-accent mb-4">
-          Professional Skills & Expertise
-        </h1>
-        <p className="text-xl text-primary max-w-3xl mx-auto">
-          A comprehensive overview of both technical and interpersonal capabilities,
-          developed through hands-on experience in cybersecurity and community engagement.
-        </p>
-      </div>
-
-      {/* Technical Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skillsData.slice(0, 3).map((category, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-            <h2 className="text-2xl font-bold text-accent mb-6">
-              {category.title}
-            </h2>
-            {category.skills.map((skill, skillIndex) => (
-              <SkillBar key={skillIndex} {...skill} />
-            ))}
-          </div>
-        ))}
-      </div>
-
-      {/* Certifications Section */}
-      <div className="mt-12 bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-accent mb-6">
-          Professional Certifications
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-bold text-primary text-lg">CompTIA Security+</h3>
-                <p className="text-gray-600 mt-1">Credential ID: FPDJN71QZ14Q1JG5</p>
-              </div>
-              <span className="text-accent text-sm font-medium">January 2025</span>
-            </div>
-          </div>
-
-          <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-bold text-primary text-lg">ISC2 Certified in Cybersecurity</h3>
-                <p className="text-gray-600 mt-1">Certificate No.: 2065997</p>
-              </div>
-              <span className="text-accent text-sm font-medium">June 2024</span>
-            </div>
-          </div>
-
-          <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-bold text-primary text-lg">Certification in Cyber Security & <br></br>Cyber Defense</h3>
-                <p className="text-gray-600 mt-1">Certificate No.: 2201800</p>
-              </div>
-              <span className="text-accent text-sm font-medium">April 2022</span>
-            </div>
-          </div>
-
-          <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-bold text-primary text-lg">Security Analyst Fundamentals (IBM)</h3>
-                <p className="text-gray-600 mt-1">Credential ID: DMC33NTNPA2M</p>
-              </div>
-              <span className="text-accent text-sm font-medium">January 2021</span>
-            </div>
-          </div>
+    <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-accent mb-4">
+            Professional Skills & Expertise
+          </h1>
+          <p className="text-xl text-primary max-w-3xl mx-auto">
+            A comprehensive overview of both technical and interpersonal capabilities,
+            developed through hands-on experience in cybersecurity and community engagement.
+          </p>
         </div>
-      </div>
 
-      {/* Soft Skills Section */}
-      <div className="mt-12 grid grid-cols-1">
-        {skillsData.slice(3).map((category, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-            <h2 className="text-2xl font-bold text-accent mb-6">
-              {category.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Technical Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillsData.slice(0, 3).map((category, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h2 className="text-2xl font-bold text-accent mb-6">
+                {category.title}
+              </h2>
               {category.skills.map((skill, skillIndex) => (
                 <SkillBar key={skillIndex} {...skill} />
               ))}
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Relevant Coursework */}
-      <div className="mt-12 bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-accent mb-6">
-          Relevant Coursework
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Software & Security
-            </h3>
-            <p className="text-gray-600">
-              Advanced security principles, secure software development, and vulnerability assessment
-            </p>
+        {/* Certifications Section */}
+        <div className="mt-12 bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-2xl font-bold text-accent mb-6">
+            Professional Certifications
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-bold text-primary text-lg">CompTIA Security+</h3>
+                  <p className="text-gray-600 mt-1">Credential ID: FPDJN71QZ14Q1JG5</p>
+                </div>
+                <span className="text-accent text-sm font-medium">January 2025</span>
+              </div>
+            </div>
+
+            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-bold text-primary text-lg">ISC2 Certified in Cybersecurity</h3>
+                  <p className="text-gray-600 mt-1">Certificate No.: 2065997</p>
+                </div>
+                <span className="text-accent text-sm font-medium">June 2024</span>
+              </div>
+            </div>
+
+            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-bold text-primary text-lg">Certification in Cyber Security & <br></br>Cyber Defense</h3>
+                  <p className="text-gray-600 mt-1">Certificate No.: 2201800</p>
+                </div>
+                <span className="text-accent text-sm font-medium">April 2022</span>
+              </div>
+            </div>
+
+            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-bold text-primary text-lg">Security Analyst Fundamentals (IBM)</h3>
+                  <p className="text-gray-600 mt-1">Credential ID: DMC33NTNPA2M</p>
+                </div>
+                <span className="text-accent text-sm font-medium">January 2021</span>
+              </div>
+            </div>
           </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Malware Analysis
-            </h3>
-            <p className="text-gray-600">
-              Reverse engineering, malware behavior analysis, and threat detection techniques
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Usable Privacy & Security
-            </h3>
-            <p className="text-gray-600">
-              Human factors in security, privacy-preserving design, and user-centered security
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Network Defenses
-            </h3>
-            <p className="text-gray-600">
-              Network security architecture, intrusion detection, and defense strategies
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Privacy Policy, Law & Technology
-            </h3>
-            <p className="text-gray-600">
-              Legal frameworks, privacy regulations, and compliance requirements
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Cybersecurity Policy & Governance
-            </h3>
-            <p className="text-gray-600">
-              Security policy development, risk management, and governance frameworks
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Statistical Reasoning with R
-            </h3>
-            <p className="text-gray-600">
-              Data analysis, statistical modeling, and security metrics visualization
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              IT Project Management
-            </h3>
-            <p className="text-gray-600">
-              Project planning, team leadership, and security implementation methodologies
-            </p>
-          </div>
-          <div className="p-4 bg-primary/10 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">
-              Lean Innovation Lab
-            </h3>
-            <p className="text-gray-600">
-              Agile methodologies, innovation practices, and real-world security solutions
-            </p>
+        </div>
+
+        {/* Soft Skills Section */}
+        <div className="mt-12 grid grid-cols-1">
+          {skillsData.slice(3).map((category, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h2 className="text-2xl font-bold text-accent mb-6">
+                {category.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {category.skills.map((skill, skillIndex) => (
+                  <SkillBar key={skillIndex} {...skill} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Relevant Coursework */}
+        <div className="mt-12 bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-2xl font-bold text-accent mb-6">
+            Relevant Coursework
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Software & Security
+              </h3>
+              <p className="text-gray-600">
+                Advanced security principles, secure software development, and vulnerability assessment
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Malware Analysis
+              </h3>
+              <p className="text-gray-600">
+                Reverse engineering, malware behavior analysis, and threat detection techniques
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Usable Privacy & Security
+              </h3>
+              <p className="text-gray-600">
+                Human factors in security, privacy-preserving design, and user-centered security
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Network Defenses
+              </h3>
+              <p className="text-gray-600">
+                Network security architecture, intrusion detection, and defense strategies
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Privacy Policy, Law & Technology
+              </h3>
+              <p className="text-gray-600">
+                Legal frameworks, privacy regulations, and compliance requirements
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Cybersecurity Policy & Governance
+              </h3>
+              <p className="text-gray-600">
+                Security policy development, risk management, and governance frameworks
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Statistical Reasoning with R
+              </h3>
+              <p className="text-gray-600">
+                Data analysis, statistical modeling, and security metrics visualization
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                IT Project Management
+              </h3>
+              <p className="text-gray-600">
+                Project planning, team leadership, and security implementation methodologies
+              </p>
+            </div>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <h3 className="font-semibold text-primary mb-2">
+                Lean Innovation Lab
+              </h3>
+              <p className="text-gray-600">
+                Agile methodologies, innovation practices, and real-world security solutions
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 } 

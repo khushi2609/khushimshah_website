@@ -41,14 +41,14 @@ export default function Navbar() {
                 Home
               </Link>
               <Link
-                href="/blog"
+                href="/in-action"
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                  isActive('/blog')
+                  isActive('/in-action')
                     ? 'border-accent text-accent'
                     : 'border-transparent text-primary hover:border-primary hover:text-accent'
                 }`}
               >
-                Blog
+                In Action
               </Link>
               <Link
                 href="/skills"
@@ -71,15 +71,16 @@ export default function Navbar() {
                 Projects
               </Link>
               <Link
-                href="/in-action"
+                href="/blog"
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                  isActive('/in-action')
+                  isActive('/blog')
                     ? 'border-accent text-accent'
                     : 'border-transparent text-primary hover:border-primary hover:text-accent'
                 }`}
               >
-                In Action
+                Blog
               </Link>
+              
             </div>
           </div>
           

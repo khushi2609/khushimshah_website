@@ -169,132 +169,134 @@ export default function Projects() {
     : projects.filter(project => project.status === filter);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-accent mb-4">
-          Cybersecurity Projects
-        </h1>
-        <p className="text-xl text-primary max-w-3xl mx-auto">
-          A showcase of my technical projects in cybersecurity, 
-          featuring research, implementations, and ongoing initiatives.
-        </p>
-      </div>
+    <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-accent mb-4">
+            Cybersecurity Projects
+          </h1>
+          <p className="text-xl text-primary max-w-3xl mx-auto">
+            A showcase of my technical projects in cybersecurity, 
+            featuring research, implementations, and ongoing initiatives.
+          </p>
+        </div>
 
-      {/* Filter Buttons */}
-      <div className="flex justify-center gap-4 mb-8">
-        <button
-          onClick={() => setFilter('all')}
-          className={`px-4 py-2 rounded-md transition-colors ${
-            filter === 'all'
-              ? 'bg-accent text-white'
-              : 'bg-white text-primary hover:bg-primary/10'
-          }`}
-        >
-          All Projects
-        </button>
-        <button
-          onClick={() => setFilter('completed')}
-          className={`px-4 py-2 rounded-md transition-colors ${
-            filter === 'completed'
-              ? 'bg-accent text-white'
-              : 'bg-white text-primary hover:bg-primary/10'
-          }`}
-        >
-          Completed
-        </button>
-        <button
-          onClick={() => setFilter('ongoing')}
-          className={`px-4 py-2 rounded-md transition-colors ${
-            filter === 'ongoing'
-              ? 'bg-accent text-white'
-              : 'bg-white text-primary hover:bg-primary/10'
-          }`}
-        >
-          Ongoing
-        </button>
-      </div>
-
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 gap-8">
-        {filteredProjects.map(project => (
-          <div
-            key={project.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+        {/* Filter Buttons */}
+        <div className="flex justify-center gap-4 mb-8">
+          <button
+            onClick={() => setFilter('all')}
+            className={`px-4 py-2 rounded-md transition-colors ${
+              filter === 'all'
+                ? 'bg-accent text-white'
+                : 'bg-white text-primary hover:bg-primary/10'
+            }`}
           >
-            <div className="md:flex">
-              {project.image && (
-                <div className="md:flex-shrink-0">
-                  <Image
-                    className="h-48 w-full md:w-48 object-cover"
-                    src={project.image}
-                    alt={project.title}
-                    width={192}
-                    height={192}
-                  />
-                </div>
-              )}
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-accent">
-                    {project.title}
-                  </h2>
-                  <div className="flex space-x-4">
-                    {project.links?.github && (
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-accent"
-                      >
-                        <FaGithub className="h-6 w-6" />
-                      </a>
-                    )}
-                    {project.links?.demo && (
-                      <a
-                        href={project.links.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-accent"
-                      >
-                        <FaExternalLinkAlt className="h-5 w-5" />
-                      </a>
-                    )}
+            All Projects
+          </button>
+          <button
+            onClick={() => setFilter('completed')}
+            className={`px-4 py-2 rounded-md transition-colors ${
+              filter === 'completed'
+                ? 'bg-accent text-white'
+                : 'bg-white text-primary hover:bg-primary/10'
+            }`}
+          >
+            Completed
+          </button>
+          <button
+            onClick={() => setFilter('ongoing')}
+            className={`px-4 py-2 rounded-md transition-colors ${
+              filter === 'ongoing'
+                ? 'bg-accent text-white'
+                : 'bg-white text-primary hover:bg-primary/10'
+            }`}
+          >
+            Ongoing
+          </button>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 gap-8">
+          {filteredProjects.map(project => (
+            <div
+              key={project.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="md:flex">
+                {project.image && (
+                  <div className="md:flex-shrink-0">
+                    <Image
+                      className="h-48 w-full md:w-48 object-cover"
+                      src={project.image}
+                      alt={project.title}
+                      width={192}
+                      height={192}
+                    />
                   </div>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  {project.description}
-                </p>
-                <div className="mb-4">
-                  <h3 className="text-lg font-semibold text-primary mb-2">
-                    Technologies Used
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                )}
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-2xl font-bold text-accent">
+                      {project.title}
+                    </h2>
+                    <div className="flex space-x-4">
+                      {project.links?.github && (
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-accent"
+                        >
+                          <FaGithub className="h-6 w-6" />
+                        </a>
+                      )}
+                      {project.links?.demo && (
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-accent"
+                        >
+                          <FaExternalLinkAlt className="h-5 w-5" />
+                        </a>
+                      )}
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-primary mb-2">
-                    Key Achievements
-                  </h3>
-                  <ul className="list-disc list-inside text-gray-600">
-                    {project.achievements.map((achievement, index) => (
-                      <li key={index}>{achievement}</li>
-                    ))}
-                  </ul>
+                  <p className="text-gray-600 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="mb-4">
+                    <h3 className="text-lg font-semibold text-primary mb-2">
+                      Technologies Used
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-primary mb-2">
+                      Key Achievements
+                    </h3>
+                    <ul className="list-disc list-inside text-gray-600">
+                      {project.achievements.map((achievement, index) => (
+                        <li key={index}>{achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   );
 } 

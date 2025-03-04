@@ -6,28 +6,21 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section with Image Collage */}
-        <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Image Collage */}
-          <div className="relative w-full md:w-1/2 h-[600px] flex items-start justify-center">
-            <div className="absolute left-4 top-4 w-72 h-96 rounded-2xl overflow-hidden transform rotate-[-4deg]">
+        <div className="relative flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Single Image */}
+          <div className="relative w-full md:w-1/2 flex justify-center">
+            <div className="relative w-72 h-96 rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
               <Image
                 src="/home/2.jpeg"
-                alt="Professional photo 1"
+                alt="Professional photo"
                 fill
-                className="object-cover shadow-lg"
+                className="object-cover"
                 priority
-              />
-            </div>
-            <div className="absolute right-4 top-20 w-72 h-96 rounded-2xl overflow-hidden transform rotate-[4deg] z-10">
-              <Image
-                src="/home/1.jpeg"
-                alt="Professional photo 2"
-                fill
-                className="object-cover shadow-lg"
-                priority
+                quality={100}
+                sizes="(max-width: 768px) 288px, (max-width: 1200px) 288px, 288px"
               />
             </div>
           </div>
@@ -38,9 +31,9 @@ export default function Home() {
               Khushi Mitesh Shah
             </h1>
             <p className="text-2xl text-primary mb-8">
-              Information Security Professional | Usable Privacy + Security Enthusiast | Community Builder
+              Information Security Professional | Usable Security Enthusiast | Community Builder
             </p>
-            <p className="text-xl text-primary/80">
+            <p className="text-xl text-gray-600">
               Passionate about cybersecurity, specializing in security operations, digital forensics,
               and threat hunting technologies. Currently pursuing MS in Information Security
               Policy and Management at Carnegie Mellon University.
@@ -62,16 +55,17 @@ export default function Home() {
 
       {/* Quick Links Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        <Link href="/blog" 
+      <Link href="/in-action"
           className="group p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-semibold text-accent mb-2 group-hover:text-primary">
-            Blog
+            In Action
             <FaArrowRight className="inline ml-2 transform group-hover:translate-x-1 transition-transform" />
           </h2>
           <p className="text-primary">
-            Embark on a journey through my mind! This blog is a space where I reflect on life, share my passions, and explore the ever-evolving landscape of information security. From personal anecdotes to technical insights, there&apos;s something for everyone.
+          Beyond the desk: A visual compilation of my engagements, from industry events to hands-on internships
           </p>
         </Link>
+      
 
         <Link href="/skills"
           className="group p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -94,19 +88,18 @@ export default function Home() {
             Portfolio of cybersecurity projects and research initiatives.
           </p>
         </Link>
-
-        <Link href="/in-action"
+        
+        <Link href="/blog" 
           className="group p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-semibold text-accent mb-2 group-hover:text-primary">
-            In Action
+            Blog
             <FaArrowRight className="inline ml-2 transform group-hover:translate-x-1 transition-transform" />
           </h2>
           <p className="text-primary">
-            Visual journey through conferences, workshops, and cybersecurity events.
+            Embark on a journey through my mind! This blog is a space where I reflect on life, share my passions, and explore the ever-evolving landscape of information security. From personal anecdotes to technical insights, there&apos;s something for everyone.
           </p>
         </Link>
       </div>
-
       
       {/* Connect with Me Section */}
       <section className="py-16 bg-white/5">
@@ -148,7 +141,7 @@ export default function Home() {
         </div>
       </section>
       {/* Chat Interface Link */}
-      <div className="text-center">
+      <div className="text-center mb-16">
         <Link href="/chat" 
           className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-primary transition-colors shadow-md hover:shadow-lg"
         >
