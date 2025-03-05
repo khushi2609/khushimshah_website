@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Chat Interface Link */}
+      {/* Chat Interface Link 
       <div className="text-center mb-16">
         <Link href="/chat" 
           className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-primary transition-colors shadow-md hover:shadow-lg"
@@ -151,7 +151,7 @@ export default function Home() {
         <p className="mt-2 text-sm text-gray-600">
           Have questions? Let Cypher guide you through Khushi&apos;s cybersecurity journey
         </p>
-      </div>
+      </div>*/}
     </main>
   );
 } 

@@ -22,7 +22,7 @@ export interface ChatPrompt {
 export interface BotPersona {
   name: string;
   avatar: string;
-  greeting: string;
+  greeting: string;  // Will be used for Cypher's introduction about Khushi
   defaultOptions: ChatOption[];
 }
 

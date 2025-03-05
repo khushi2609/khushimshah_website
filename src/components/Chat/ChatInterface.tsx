@@ -22,15 +22,15 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
   };
 
   useEffect(() => {
-    // Add initial greeting
+    // Add initial greeting from Cypher
     const greeting: ChatMessage = {
       id: uuidv4(),
       type: 'bot',
-      content: persona.greeting,
+      content: `Hey there! I'm Cypher, and I'd love to tell you about Khushi. She's a cybersecurity enthusiast who's always pushing the boundaries of digital security.\n\nWhat would you like to know about her?`,
       timestamp: new Date(),
     };
     setMessages([greeting]);
-  }, [persona.greeting]);
+  }, []);
 
   useEffect(() => {
     scrollToBottom();
@@ -57,10 +57,10 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
     await simulateTyping();
     
     if (option.id === 'back') {
-      await addMessage('Let me know if you have any other questions!', 'bot');
+      await addMessage('What else would you like to know about Khushi?', 'bot');
       setCurrentPrompt({
         id: 'main',
-        message: 'What else would you like to know?',
+        message: 'Choose another topic you\'d like to explore about her:',
         options: persona.defaultOptions,
       });
       return;
@@ -79,15 +79,15 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
         <div className="relative">
           <Image
             src={persona.avatar}
-            alt={persona.name}
+            alt="Cypher"
             width={48}
             height={48}
             className="w-12 h-12 rounded-full mr-3 floating"
           />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-accent">{persona.name}</h1>
-          <p className="text-sm text-primary">Cybersecurity Portfolio Interface</p>
+          <h1 className="text-xl font-bold text-accent">Cypher</h1>
+          <p className="text-sm text-primary">Khushi's Portfolio Guide</p>
         </div>
       </div>
 

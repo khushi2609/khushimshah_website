@@ -198,22 +198,19 @@ export const chatPrompts: Record<string, ChatPrompt> = {
 
   projects: {
     id: 'projects',
-    message: `Here are some of Khushi's notable cybersecurity projects:
+    message: `Here are some of Khushi's notable cybersecurity projects: \n
 
-1. Network Intrusion Detection System
-- Custom-built IDS using Python and Machine Learning
-- Real-time traffic analysis and threat detection
-- GitHub: [Link to be added]
+1. Network Intrusion Detection System \n
+- Custom-built IDS using Python and Machine Learning \n
+- Real-time traffic analysis and threat detection \n
 
-2. Web Application Security Scanner
-- Automated vulnerability assessment tool
-- Cross-site scripting (XSS) and SQL injection detection
-- [More details available]
+2. Web Application Security Scanner \n
+- Automated vulnerability assessment tool \n
+- Cross-site scripting (XSS) and SQL injection detection \n
 
-3. CTF Challenge Platform
-- Developed and hosted multiple CTF challenges
-- Focus on web security and reverse engineering
-- [View challenges]
+3. CTF Challenge Platform \n
+- Developed and hosted multiple CTF challenges \n
+- Focus on web security and reverse engineering \n
 
 Would you like to know more about any specific project?`,
     options: [
@@ -228,20 +225,21 @@ Would you like to know more about any specific project?`,
     id: 'resources',
     message: `Here are some excellent cybersecurity resources Khushi recommends:
 
-📚 Learning Platforms:
-- TryHackMe
-- HackTheBox
-- PortSwigger Web Security Academy
+📚 Learning Platforms: \n
+- TryHackMe \n
+- LinkedIn Learning \n
 
-📖 Books:
-- "The Web Application Hacker's Handbook"
-- "Real-World Bug Hunting"
-- "Practical Malware Analysis"
+News Sources: \n
+- IAPP News \n
+- Slashdot Org \n
+- WSJ Pro Cybersecurity \n
+- Bloomberg Technology \n
 
-🎓 Certifications:
-- CompTIA Security+
-- OSCP
-- CEH
+🎓 Certifications: \n
+- CompTIA Security+ \n
+- OSCP \n
+- CEH \n
+- Refer to "https://pauljerimy.com/security-certification-roadmap/" to know more about certifications \n
 
 Would you like specific details about any of these?`,
     options: [
@@ -254,11 +252,11 @@ Would you like specific details about any of these?`,
 
   contact: {
     id: 'contact',
-    message: `You can reach Khushi through any of these channels:
+    message: `You can reach Khushi through any of these channels: \n
 
-📧 Email: khushims@andrew.cmu.edu or shahk2609@gmail.com
-🔗 LinkedIn: www.linkedin.com/in/shahkhushimitesh
-🐙 GitHub: www.github.com/khushi2609
+📧 Email: khushims@andrew.cmu.edu or shahk2609@gmail.com \n
+🔗 LinkedIn: www.linkedin.com/in/shahkhushimitesh \n
+🐙 GitHub: www.github.com/khushi2609 \n
 
 She's always open to discussing cybersecurity, potential collaborations, or job opportunities!`,
     options: [
