@@ -37,7 +37,7 @@ export default function JMRCBlogPost() {
           </div>
 
           <p className="text-gray-800 mb-6">
-            As part of our Lean Innovation Lab class project, I had the incredible opportunity to embark on a field trip to the Joint Multinational Readiness Center (JMRC) in Hohenfels, Germany. This experience not only provided firsthand insights into military operations but also connected theoretical knowledge with practical applications in a way that textbooks simply can't.
+            As part of our Lean Innovation Lab class project, I had the incredible opportunity to embark on a field trip to the Joint Multinational Readiness Center (JMRC) in Hohenfels, Germany. This experience not only provided firsthand insights into military operations but also connected theoretical knowledge with practical applications in a way that textbooks simply can&apos;t.
           </p>
 
           <h2 className="text-2xl font-bold text-accent mt-8 mb-4">

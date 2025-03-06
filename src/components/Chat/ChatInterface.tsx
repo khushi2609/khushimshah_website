@@ -26,7 +26,7 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
     const greeting: ChatMessage = {
       id: uuidv4(),
       type: 'bot',
-      content: `Hey there! I'm Cypher, and I'd love to tell you about Khushi. She's a cybersecurity enthusiast who's always pushing the boundaries of digital security.\n\nWhat would you like to know about her?`,
+      content: `Hey there! I'm Cypher, and I'd love to tell you about Khushi. She&apos;s a cybersecurity enthusiast who&apos;s always pushing the boundaries of digital security.\n\nWhat would you like to know about her?`,
       timestamp: new Date(),
     };
     setMessages([greeting]);
@@ -60,7 +60,7 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
       await addMessage('What else would you like to know about Khushi?', 'bot');
       setCurrentPrompt({
         id: 'main',
-        message: 'Choose another topic you\'d like to explore about her:',
+        message: 'Choose another topic you&apos;d like to explore about her:',
         options: persona.defaultOptions,
       });
       return;
@@ -87,7 +87,7 @@ export default function ChatInterface({ persona, initialPrompt }: ChatInterfaceP
         </div>
         <div>
           <h1 className="text-xl font-bold text-accent">Cypher</h1>
-          <p className="text-sm text-primary">Khushi's Portfolio Guide</p>
+          <p className="text-sm text-primary">Khushi&apos;s Portfolio Guide</p>
         </div>
       </div>
 
