@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface BlogPost {
   slug: string;
@@ -41,6 +42,15 @@ export default function BlogPage() {
               key={post.slug}
               className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
             >
+              <div className="relative w-full h-48">
+                <Image
+                  src={`/blog/jmrc/PolandSiteTank.jpg`}
+                  alt={`Cover image for ${post.title}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div> 
               <div className="p-6">
                 <div className="flex items-center text-sm text-primary/60 mb-2">
                   <span>{post.date}</span>
