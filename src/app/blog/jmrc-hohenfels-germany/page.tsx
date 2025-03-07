@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function JMRCBlogPost() {
@@ -26,6 +27,7 @@ export default function JMRCBlogPost() {
         </Link>
 
         <article className="prose prose-lg max-w-none">
+
           <h1 className="text-4xl font-bold text-accent mb-6">
             Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany
           </h1>
@@ -60,6 +62,7 @@ export default function JMRCBlogPost() {
           <p className="text-gray-800 mb-6">
             The following day was particularly enlightening as we prepared for engagements with D Company (1-4 IN) and toured Uebungsdorf. Observing a breach exercise firsthand was unforgettable, and it was invaluable to participate in a Q&A session that deepened our understanding of the trials and tribulations of military training. The insights we gained that day showcased the complexities of planning and executing military strategies, an area we had only touched upon in class discussions.
           </p>
+
 
           <h2 className="text-2xl font-bold text-accent mt-8 mb-4">
             Day 4: Interviews and Technological Advancements

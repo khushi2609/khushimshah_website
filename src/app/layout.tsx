@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Indie_Flower } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navigation/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
+const indie = Indie_Flower({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-indie',
+});
 
 export const metadata: Metadata = {
   title: 'Khushi Shah - Cybersecurity Professional',
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${indie.variable} min-h-screen bg-background`}>
         <Navbar />
         <main className="min-h-screen bg-background">
           {children}

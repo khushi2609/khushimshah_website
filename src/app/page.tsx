@@ -3,40 +3,64 @@
 import Link from 'next/link';
 import { FaArrowRight, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Image from 'next/image';
+import { HoverWord } from '@/components/AnimatedDefinition';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section with Image Collage */}
-        <div className="relative flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Single Image */}
+        <div className="relative flex flex-col md:flex-row items-start justify-between gap-12">
+          {/* Images Container */}
           <div className="relative w-full md:w-1/2 flex justify-center">
-            <div className="relative w-72 h-96 rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
-              <Image
-                src="/home/2.jpeg"
-                alt="Professional photo"
-                fill
-                className="object-cover"
-                priority
-                quality={100}
-                sizes="(max-width: 768px) 288px, (max-width: 1200px) 288px, 288px"
-              />
+            <div className="relative w-[300px] h-[400px] sm:w-[360px] sm:h-[480px]">
+              {/* First Image - Cathedral */}
+              <div className="absolute -left-20 top-0 w-56 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden shadow-xl transform -rotate-6 hover:-rotate-2 transition-transform duration-300">
+                <Image
+                  src="/home/3.jpeg"
+                  alt="Professional photo 1"
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={100}
+                  sizes="(max-width: 640px) 224px, 256px"
+                />
+              </div>
+              
+              {/* Second Image - Pittsburgh */}
+              <div className="absolute right-0 bottom-0 w-56 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                <Image
+                  src="/home/2.jpeg"
+                  alt="Professional photo 2"
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={100}
+                  sizes="(max-width: 640px) 224px, 256px"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Text Content */}
-          <div className="md:w-1/2 text-left">
+          {/* Text Content Side */}
+          <div className="md:w-1/2">
             <h1 className="text-5xl font-bold text-accent mb-6">
               Khushi Mitesh Shah
             </h1>
-            <p className="text-2xl text-primary mb-8">
-              Information Security Professional | Usable Security Enthusiast | Community Builder
-            </p>
+            
+            {/* Professional Title Section */}
+            <div className="space-y-12 mb-12">
+              {/* First Title */}
+              <div className="relative">
+                <h2 className="text-2xl text-primary">Information Security Professional | Usable Security Enthusiast | Euthelian</h2>
+              </div>
+            </div>
+
+            {/* Main Description */}
             <p className="text-xl text-gray-600">
-              Passionate about cybersecurity, specializing in security operations, digital forensics,
-              and threat hunting technologies. Currently pursuing MS in Information Security
-              Policy and Management at Carnegie Mellon University.
+              Passionate about cybersecurity, specializing in security operations,
+              digital forensics, and threat hunting technologies. Currently pursuing
+              MS in Information Security Policy and Management at Carnegie Mellon University.
             </p>
           </div>
         </div>
