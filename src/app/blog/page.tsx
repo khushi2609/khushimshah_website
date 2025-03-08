@@ -19,6 +19,13 @@ const blogPosts: BlogPost[] = [
     date: 'December 2023',
     readTime: '8 min read',
   },
+  {
+    slug: 'Internship-Hunt',
+    title: 'My Summer Internship Hunt Experience: A Comedy of Errors (and Lessons Learned)',
+    excerpt: 'A candid reflection on the challenges, mishaps, and valuable lessons learned during my graduate internship search journey.',
+    date: 'December 2023',
+    readTime: '10 min read',
+  },
   // Add more blog posts here as you create them
 ];
 
@@ -44,7 +51,9 @@ export default function BlogPage() {
             >
               <div className="relative w-full h-48">
                 <Image
-                  src={`/blog/jmrc/PolandSiteTank.jpg`}
+                  src={post.slug === 'jmrc-hohenfels-germany' 
+                    ? `/blog/jmrc/PolandSiteTank.jpg`
+                    : `/blog/internship-hunt/cover-photo.jpg`}
                   alt={`Cover image for ${post.title}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"

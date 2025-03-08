@@ -52,7 +52,7 @@ export default function Home() {
             <div className="space-y-12 mb-12">
               {/* First Title */}
               <div className="relative">
-                <h2 className="text-2xl text-primary">Information Security Professional | Usable Security Enthusiast | Euthelian</h2>
+                <h2 className="text-2xl text-primary">Information Security Professional | Usable Security Enthusiast </h2>
               </div>
             </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
           </p>
         </Link>
       </div>
-      
+
       {/* Connect with Me Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,9 +133,25 @@ export default function Home() {
               Connect with Me
             </h2>
             <p className="text-xl text-primary max-w-3xl mx-auto">
-              Let&apos;s collaborate on making the digital world more secure and privacy-conscious.
+              If you identify with any of the words below, let&apos;s collaborate on making the digital world more secure and privacy-conscious :)
             </p>
           </div>
+      {/* Professional Title Section */}
+            <div className="space-y-12 mb-12">
+              <div className="relative flex justify-center items-center">
+                <div className="relative w-full h-[400px] flex justify-center items-center">
+                  <Image
+                    src="/home/Intro.jpg"
+                    alt="Information Security Professional | Usable Security Enthusiast | Euthelian"
+                    fill
+                    className="object-contain"
+                    priority
+                    quality={100}
+                    sizes="(max-width: 1024px) 100vw, 800px"
+                  />
+                </div>
+              </div>
+            </div>
 
           <div className="flex justify-center gap-8 flex-wrap">
             <a
