@@ -33,7 +33,7 @@ export default function JMRCBlogPost() {
           </h1>
 
           <div className="flex items-center text-gray-600 mb-8">
-            <time>December 2023</time>
+            <time>December 2024</time>
             <span className="mx-2">•</span>
             <span>8 min read</span>
           </div>
@@ -120,7 +120,7 @@ export default function JMRCBlogPost() {
             Reflection: A Transformative Team Experience
           </h2>
           <p className="text-gray-800 mb-6">
-            Throughout this trip, the support provided by SFC David and SSG Aaron was commendable. Their adaptability and attentiveness allowed us to fully immerse ourselves in the educational opportunities presented at Hohenfels. Engaging with military leaders and participating in various exercises reinforced the importance of collaboration and clear communication—lessons that are vital not just in the military but in any team-oriented environment.
+            Throughout this trip, the support provided by SFC David and SSG Aaron was commendable. Their adaptability and attentiveness allowed us to fully immerse ourselves in the educational opportunities presented at Hohenfels. Engaging with military leaders and participating in various exercises reinforced the importance of collaboration and clear communication—lessons that are vital not just in the military but in any team-oriented environment. A special shoutout to Tanner Balluf, Cooper Zhu, Jeffery Zhang and Prof. David Riel for being such a great team!
           </p>
 
           <p className="text-gray-800 mb-6">

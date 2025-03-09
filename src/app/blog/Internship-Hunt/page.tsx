@@ -32,7 +32,7 @@ export default function InternshipHuntBlogPost() {
           </h1>
 
           <div className="flex items-center text-gray-600 mb-8">
-            <time>December 2023</time>
+            <time>March 2025</time>
             <span className="mx-2">•</span>
             <span>10 min read</span>
           </div>
