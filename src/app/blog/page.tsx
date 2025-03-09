@@ -16,14 +16,14 @@ const blogPosts: BlogPost[] = [
     slug: 'jmrc-hohenfels-germany',
     title: 'Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany',
     excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
-    date: 'December 2023',
+    date: 'December 2024',
     readTime: '8 min read',
   },
   {
     slug: 'Internship-Hunt',
     title: 'My Summer Internship Hunt Experience: A Comedy of Errors (and Lessons Learned)',
     excerpt: 'A candid reflection on the challenges, mishaps, and valuable lessons learned during my graduate internship search journey.',
-    date: 'December 2023',
+    date: 'March 2025',
     readTime: '10 min read',
   },
   // Add more blog posts here as you create them
