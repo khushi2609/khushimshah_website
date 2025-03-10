@@ -38,7 +38,7 @@ export default function InternshipHuntBlogPost() {
           </div>
 
           <p className="text-gray-800 mb-6">
-         <b><i>Hey everyone, grab a snack and settle in because I&apos;m about to spill the tea on my first summer in the good ol&apos; US of A as a fresh out of undergrad. </i></b> <br></br><br></br> Picture this: wide-eyed international student armed with a GPA that looked decent on paper and a burning desire to &quot;make it&quot; in the land of opportunity. My mission? To snag a killer summer internship that would catapult me to career stardom. <b><i>Spoiler alert: it didn&apos;t quite pan out that way.</i></b>
+         <b><i>Hey everyone, grab a snack and settle in because I&apos;m about to spill the tea on my first summer in the good ol&apos; US of A, fresh out of undergrad. </i></b> <br></br><br></br> Picture this: wide-eyed international student armed with a GPA that looked decent on paper and a burning desire to &quot;make it&quot; in the land of opportunity. My mission? To snag a killer summer internship that would catapult me to career stardom. <b><i>Spoiler alert: it didn&apos;t quite pan out that way.</i></b>
           </p>
 
           <p className="text-gray-800 mb-6">

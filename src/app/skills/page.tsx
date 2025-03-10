@@ -2,364 +2,161 @@
 
 interface Skill {
   name: string;
-  level: 'Expert' | 'Advanced' | 'Intermediate' | 'Learning';
   description: string;
-  context?: string;
 }
 
 interface SkillCategory {
   title: string;
   skills: Skill[];
-  type?: 'technical' | 'soft';
 }
 
-const getLevelPercentage = (level: string): number => {
-  switch (level) {
-    case 'Expert': return 95;
-    case 'Advanced': return 85;
-    case 'Intermediate': return 75;
-    case 'Learning': return 60;
-    default: return 75;
-  }
-};
-
-const skillsData: SkillCategory[] = [
+const skillCategories: SkillCategory[] = [
   {
-    title: 'Security Tools',
-    type: 'technical',
-    skills: [
-      {
-        name: 'Splunk',
-        level: 'Expert',
-        description: 'Advanced SIEM implementation, custom dashboard creation, and threat hunting.'
-      },
-      {
-        name: 'Microsoft Sentinel',
-        level: 'Advanced',
-        description: 'Configuration of analytical rules, incident management, and threat response.'
-      },
-      {
-        name: 'Wireshark',
-        level: 'Advanced',
-        description: 'Network traffic analysis, packet inspection, and protocol analysis.'
-      },
-      {
-        name: 'Burp Suite',
-        level: 'Advanced',
-        description: 'Web application security testing and vulnerability assessment.'
-      },
-      {
-        name: 'Cellebrite & XRY',
-        level: 'Intermediate',
-        description: 'Digital evidence recovery and analysis in cybercrime investigations.'
-      }
+    "title": "Technical Skills",
+    "skills": [
+      { "name": "Python", "description": "Developing robust scripts for automation, data analysis, and security tooling integration, leveraging libraries like Pandas and Scikit-learn." },
+      { "name": "Java", "description": "Building scalable and maintainable applications with a focus on object-oriented design patterns and secure coding practices." },
+      { "name": "C++", "description": "Optimizing system performance through efficient memory management and low-level programming for critical security applications." },
+      { "name": "SQL", "description": "Designing and optimizing complex database queries for efficient data retrieval and security auditing, ensuring data integrity and confidentiality." },
+      { "name": "JavaScript/TypeScript", "description": "Developing interactive and secure web applications, utilizing modern frameworks like React and Angular for enhanced user experience." },
+      { "name": "Shell Scripting", "description": "Automating system administration tasks and security operations for efficient incident response and configuration management." }
     ]
   },
   {
-    title: 'Programming Languages',
-    type: 'technical',
-    skills: [
-      {
-        name: 'Python',
-        level: 'Expert',
-        description: 'Security automation, tool development, and data analysis.'
-      },
-      {
-        name: 'Java',
-        level: 'Advanced',
-        description: 'Application development and security implementation.'
-      },
-      {
-        name: 'C++',
-        level: 'Advanced',
-        description: 'System-level programming and performance optimization.'
-      },
-      {
-        name: 'R',
-        level: 'Intermediate',
-        description: 'Statistical analysis and data visualization for security metrics.'
-      }
+    "title": "Security Tools & Frameworks",
+    "skills": [
+      { "name": "Wireshark", "description": "Analyzing network traffic for security vulnerabilities and anomalies, identifying malicious patterns and protocol weaknesses." },
+      { "name": "Nmap", "description": "Conducting comprehensive network discovery and vulnerability assessments, identifying open ports and services for security hardening." },
+      { "name": "Metasploit", "description": "Performing advanced penetration testing and vulnerability exploitation, simulating real-world attacks to assess security posture." },
+      { "name": "Burp Suite", "description": "Identifying and mitigating web application vulnerabilities through comprehensive security testing and analysis." },
+      { "name": "Snort", "description": "Implementing and managing intrusion detection and prevention systems to proactively defend against network threats." },
+      { "name": "Splunk", "description": "Analyzing security logs and events for threat detection and incident response, utilizing dashboards and alerts for real-time monitoring." }
     ]
   },
   {
-    title: 'Frameworks & Standards',
-    type: 'technical',
-    skills: [
-      {
-        name: 'NIST',
-        level: 'Advanced',
-        description: 'Implementation of NIST SP 800-60, FIPS 199, FIPS 200 frameworks and cybersecurity best practices.'
-      },
-      {
-        name: 'ISO 27001',
-        level: 'Advanced',
-        description: 'Information security management system standards and implementation guidelines.'
-      },
-      {
-        name: 'PCI DSS',
-        level: 'Advanced',
-        description: 'Payment card industry security standards compliance and implementation.'
-      },
-      {
-        name: 'GDPR',
-        level: 'Advanced',
-        description: 'European data protection and privacy regulations compliance and implementation.'
-      },
-      {
-        name: 'Security Frameworks',
-        level: 'Expert',
-        description: 'Experience with MITRE ATT&CK, TAXII, and other threat intelligence frameworks.'
-      },
-      {
-        name: 'Risk Management',
-        level: 'Advanced',
-        description: 'Implementation of risk assessment methodologies and security controls based on industry standards.'
-      }
+    "title": "Cloud & Infrastructure",
+    "skills": [
+      { "name": "AWS", "description": "Deploying and managing secure cloud infrastructure and services, implementing best practices for security and compliance." },
+      { "name": "Docker", "description": "Containerizing applications for efficient deployment and scalability, ensuring secure configurations and resource isolation." },
+      { "name": "Kubernetes", "description": "Orchestrating containerized workloads for high availability and scalability, implementing security policies and access controls." },
+      { "name": "Linux", "description": "Securing and administering Linux systems for critical infrastructure components, implementing hardening techniques and access controls." },
+      { "name": "Git", "description": "Managing version control and collaboration for secure software development, ensuring code integrity and traceability." }
     ]
   },
   {
-    title: 'Soft Skills',
-    type: 'soft',
-    skills: [
-      {
-        name: 'Communication',
-        level: 'Expert',
-        description: 'Strong verbal and written communication skills developed through technical report writing and stakeholder presentations.',
-        context: 'Refined during Digital Forensics internship, creating court-ready documentation and presenting findings to legal teams.'
-      },
-      {
-        name: 'Problem Solving',
-        level: 'Expert',
-        description: 'Analytical approach to complex challenges with creative solution development.',
-        context: 'Demonstrated through CTF competitions, security incident response, and innovative project solutions.'
-      },
-      {
-        name: 'Attention to Detail',
-        level: 'Expert',
-        description: 'Meticulous approach to work with high accuracy in documentation and analysis.',
-        context: 'Crucial skill honed during forensic investigations and security assessments.'
-      },
-      {
-        name: 'Team Collaboration',
-        level: 'Expert',
-        description: 'Effective team player with experience in cross-functional and international teams.',
-        context: 'Strengthened through military innovation project at JMRC and various cybersecurity initiatives.'
-      },
-      {
-        name: 'Stress Management',
-        level: 'Advanced',
-        description: 'Ability to maintain performance under pressure and meet tight deadlines.',
-        context: 'Developed through CTF competitions, incident response scenarios, and project deadlines.'
-      },
-      {
-        name: 'Leadership',
-        level: 'Advanced',
-        description: 'Experience in leading teams and organizing community initiatives.',
-        context: 'Demonstrated through organizing Privacy + Security Spring Academy and leading project teams.'
-      },
-      {
-        name: 'Adaptability',
-        level: 'Expert',
-        description: 'Quick learner with ability to adapt to new technologies and environments.',
-        context: 'Proven through diverse internship experiences and rapid technology adoption.'
-      }
+    "title": "Security Domains",
+    "skills": [
+      { "name": "Network Security", "description": "Implementing and managing network security controls, analyzing protocols and traffic patterns for threat detection and prevention." },
+      { "name": "Application Security", "description": "Developing and testing secure applications, implementing secure coding practices and conducting vulnerability assessments." },
+      { "name": "Incident Response", "description": "Responding to security incidents and breaches, conducting forensic analysis and implementing containment and remediation strategies." },
+      { "name": "Risk Assessment", "description": "Identifying and evaluating security risks and vulnerabilities, conducting risk assessments and developing mitigation plans." },
+      { "name": "Security Architecture", "description": "Designing and implementing secure system architectures, integrating security controls and best practices." }
+    ]
+  },
+  {
+    "title": "Proficiencies",
+    "skills": [
+      { "name": "Project Management", "description": "Strategic planning and meticulous execution, ensuring projects are delivered on time and within scope." },
+      { "name": "Technical Writing", "description": "Crafting clear, concise, and comprehensive documentation tailored for diverse audiences, facilitating knowledge transfer and informed decision-making." },
+      { "name": "Team Leadership", "description": "Fostering collaborative environments, empowering team members, and driving collective success through effective coordination and motivation." },
+      { "name": "Problem Solving", "description": "Employing rigorous analytical thinking to identify root causes, develop innovative solutions, and mitigate risks effectively." },
+      { "name": "Communication", "description": "Building strong relationships and ensuring alignment among stakeholders through clear, persuasive, and empathetic communication." }
     ]
   }
 ];
 
-function SkillBar({ name, level, description, context }: Skill) {
-  return (
-    <div className="mb-6">
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-lg font-medium text-primary">{name}</span>
-        <span className="text-sm text-accent font-medium">{level}</span>
-      </div>
-      <div className="h-2 bg-gray-200 rounded-full">
-        <div
-          className="h-full bg-accent rounded-full transition-all duration-500"
-          style={{ width: `${getLevelPercentage(level)}%` }}
-        />
-      </div>
-      <p className="mt-2 text-sm text-gray-600">{description}</p>
-      {context && (
-        <p className="mt-1 text-sm text-accent/80 italic">
-          {context}
-        </p>
-      )}
-    </div>
-  );
-}
-
-export default function Skills() {
+export default function SkillsPage() {
   return (
     <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-accent mb-4">
-            Professional Skills & Expertise
-          </h1>
-          <p className="text-xl text-primary max-w-3xl mx-auto">
-            A comprehensive overview of both technical and interpersonal capabilities,
-            developed through hands-on experience in cybersecurity and community engagement.
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-accent mb-4">Skills</h1>
+          <p className="text-xl text-primary max-w-2xl mx-auto">
+            A comprehensive overview of my technical and professional capabilities.
           </p>
         </div>
 
-        {/* Technical Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillsData.slice(0, 3).map((category, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-2xl font-bold text-accent mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {skillCategories.map((category) => (
+            <div 
+              key={category.title} 
+              className="bg-white p-6 rounded-lg shadow-md"
+            >
+              <h2 className="text-2xl font-bold text-accent mb-4">
                 {category.title}
               </h2>
-              {category.skills.map((skill, skillIndex) => (
-                <SkillBar key={skillIndex} {...skill} />
-              ))}
+              <ul className="space-y-4">
+                {category.skills.map((skill) => (
+                  <li 
+                    key={skill.name} 
+                    className="text-primary"
+                  >
+                    <div className="font-semibold">{skill.name}</div>
+                    <div className="text-sm text-primary/70">{skill.description}</div>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        {/* Certifications Section */}
-        <div className="mt-12 bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-accent mb-6">
-            Professional Certifications
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="font-bold text-primary text-lg">CompTIA Security+</h3>
-                  <p className="text-gray-600 mt-1">Credential ID: FPDJN71QZ14Q1JG5</p>
-                </div>
-                <span className="text-accent text-sm font-medium">January 2025</span>
-              </div>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-accent mb-8 text-center">Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-accent mb-2">CompTIA Security+</h3>
+              <p className="text-primary mb-2">Certification ID:  FPDJN71QZ14Q1JG5</p>
             </div>
-
-            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="font-bold text-primary text-lg">ISC2 Certified in Cybersecurity</h3>
-                  <p className="text-gray-600 mt-1">Certificate No.: 2065997</p>
-                </div>
-                <span className="text-accent text-sm font-medium">June 2024</span>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-accent mb-2">ISC2 CC</h3>
+              <p className="text-primary mb-2">Certification ID:  2065997</p>
             </div>
-
-            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="font-bold text-primary text-lg">Certification in Cyber Security & <br></br>Cyber Defense</h3>
-                  <p className="text-gray-600 mt-1">Certificate No.: 2201800</p>
-                </div>
-                <span className="text-accent text-sm font-medium">April 2022</span>
-              </div>
-            </div>
-
-            <div className="p-6 bg-primary/5 rounded-lg border border-primary/10">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="font-bold text-primary text-lg">Security Analyst Fundamentals (IBM)</h3>
-                  <p className="text-gray-600 mt-1">Credential ID: DMC33NTNPA2M</p>
-                </div>
-                <span className="text-accent text-sm font-medium">January 2021</span>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-accent mb-2">IBM: Security Analyst Fundamentals</h3>
+              <p className="text-primary mb-2">Certification ID: DMC33NTNPA2M</p>
             </div>
           </div>
         </div>
 
-        {/* Soft Skills Section */}
-        <div className="mt-12 grid grid-cols-1">
-          {skillsData.slice(3).map((category, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <h2 className="text-2xl font-bold text-accent mb-6">
-                {category.title}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {category.skills.map((skill, skillIndex) => (
-                  <SkillBar key={skillIndex} {...skill} />
-                ))}
-              </div>
+        <div>
+          <h2 className="text-3xl font-bold text-accent mb-8 text-center">Relevant Coursework</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-accent mb-4">Information Security</h3>
+              <ul className="space-y-2 text-primary">
+                <li>Network Security</li>
+                <li>Applied Cryptography</li>
+                <li>Security Risk Management</li>
+                <li>Software Security</li>
+                <li>Network Defense</li>
+                <li>Incident Response</li>
+                <li>Usable Privacy and Security</li>
+              </ul>
             </div>
-          ))}
-        </div>
-
-        {/* Relevant Coursework */}
-        <div className="mt-12 bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-accent mb-6">
-            Relevant Coursework
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Software & Security
-              </h3>
-              <p className="text-gray-600">
-                Advanced security principles, secure software development, and vulnerability assessment
-              </p>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-accent mb-4">Policy & Management</h3>
+              <ul className="space-y-2 text-primary">
+                <li>Information Security Policy</li>
+                <li>Privacy in the Digital Age</li>
+                <li>Project Management</li>
+                <li>Applied Economics</li>
+                <li>Information Security Risk Management</li>
+                <li>Lean Innovation Methodology</li>
+              
+              </ul>
             </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Malware Analysis
-              </h3>
-              <p className="text-gray-600">
-                Reverse engineering, malware behavior analysis, and threat detection techniques
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Usable Privacy & Security
-              </h3>
-              <p className="text-gray-600">
-                Human factors in security, privacy-preserving design, and user-centered security
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Network Defenses
-              </h3>
-              <p className="text-gray-600">
-                Network security architecture, intrusion detection, and defense strategies
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Privacy Policy, Law & Technology
-              </h3>
-              <p className="text-gray-600">
-                Legal frameworks, privacy regulations, and compliance requirements
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Cybersecurity Policy & Governance
-              </h3>
-              <p className="text-gray-600">
-                Security policy development, risk management, and governance frameworks
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Statistical Reasoning with R
-              </h3>
-              <p className="text-gray-600">
-                Data analysis, statistical modeling, and security metrics visualization
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                IT Project Management
-              </h3>
-              <p className="text-gray-600">
-                Project planning, team leadership, and security implementation methodologies
-              </p>
-            </div>
-            <div className="p-4 bg-primary/10 rounded-lg">
-              <h3 className="font-semibold text-primary mb-2">
-                Lean Innovation Lab
-              </h3>
-              <p className="text-gray-600">
-                Agile methodologies, innovation practices, and real-world security solutions
-              </p>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-accent mb-4">Technical Foundation</h3>
+              <ul className="space-y-2 text-primary">
+                <li>Computer Systems Security</li>
+                <li>Database Management</li>
+                <li>Object-Oriented Programming</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Computer Networks</li>
+                <li>Computer Organization and Architecture</li>
+                <li>Operating Systems</li>
+                
+              </ul>
             </div>
           </div>
         </div>
