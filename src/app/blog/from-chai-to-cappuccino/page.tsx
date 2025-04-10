@@ -37,7 +37,6 @@ export default function ChaiToCappuccinoBlogPost() {
             <span>10 min read</span>
           </div>
 
-          {/* Add your blog post content here! */}
           <p className="text-gray-800 mb-6">
           <i>Namaste, folks! </i>
           <br></br>
