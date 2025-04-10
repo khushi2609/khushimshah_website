@@ -11,13 +11,13 @@ interface BlogPost {
   readTime: string;
 }
 
-const blogPosts: BlogPost[] = [
+const blogPosts: BlogPost[] = [  
   {
-    slug: 'jmrc-hohenfels-germany',
-    title: 'Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany',
-    excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
-    date: 'December 2023',
-    readTime: '8 min read',
+    slug: 'from-chai-to-cappuccino',
+    title: 'From Chai to Cappuccino: My Hilarious, Heartwarming (and Slightly Tipsy) US Adventure so far',
+    excerpt: 'Navigating the cultural shifts and personal growth from India to the US, one cup at a time.',
+    date: 'April 2025',
+    readTime: '10 min read',
   },
   {
     slug: 'Internship-Hunt',
@@ -27,13 +27,13 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
   },
   {
-    slug: 'from-chai-to-cappuccino',
-    title: 'From Chai to Cappuccino: My Hilarious, Heartwarming (and Slightly Tipsy) US Adventure so far',
-    excerpt: 'Navigating the cultural shifts and personal growth from India to the US, one cup at a time.',
-    date: 'April 2025',
-    readTime: '10 min read',
-  },
-  // Add more blog posts here as you create them
+    slug: 'jmrc-hohenfels-germany',
+    title: 'Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany',
+    excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
+    date: 'December 2023',
+    readTime: '8 min read',
+  }
+ 
 ];
 
 export default function BlogPage() {
