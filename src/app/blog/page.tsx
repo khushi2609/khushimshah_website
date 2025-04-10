@@ -22,7 +22,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'Internship-Hunt',
     title: 'My Summer Internship Hunt Experience: A Comedy of Errors (and Lessons Learned)',
-    excerpt: 'A candid reflection on the challenges, mishaps, and valuable lessons learned during my graduate internship search journey.',
+    excerpt: 'A candid reflection on the mishaps, and valuable lessons learned during my internship search.',
     date: 'March 2025',
     readTime: '10 min read',
   },
