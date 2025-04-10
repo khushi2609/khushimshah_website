@@ -16,7 +16,7 @@ const blogPosts: BlogPost[] = [
     slug: 'jmrc-hohenfels-germany',
     title: 'Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany',
     excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
-    date: 'December 2024',
+    date: 'December 2023',
     readTime: '8 min read',
   },
   {
@@ -26,10 +26,30 @@ const blogPosts: BlogPost[] = [
     date: 'March 2025',
     readTime: '10 min read',
   },
+  {
+    slug: 'from-chai-to-cappuccino',
+    title: 'From Chai to Cappuccino: My Hilarious, Heartwarming (and Slightly Tipsy) US Adventure so far',
+    excerpt: 'Navigating the cultural shifts and personal growth from India to the US, one cup at a time.',
+    date: 'April 2025',
+    readTime: '10 min read',
+  },
   // Add more blog posts here as you create them
 ];
 
 export default function BlogPage() {
+  const getCoverImagePath = (slug: string) => {
+    switch (slug) {
+      case 'jmrc-hohenfels-germany':
+        return '/blog/jmrc/PolandSiteTank.jpg';
+      case 'Internship-Hunt':
+        return '/blog/internship-hunt/cover-photo.jpg';
+      case 'from-chai-to-cappuccino':
+        return '/blog/from-chai-to-cappucino/cover_photo.jpg';
+      default:
+        return '/blog/default-cover.jpg';
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background px-4 sm:px-8 lg:px-12 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -51,9 +71,7 @@ export default function BlogPage() {
             >
               <div className="relative w-full h-48">
                 <Image
-                  src={post.slug === 'jmrc-hohenfels-germany' 
-                    ? `/blog/jmrc/PolandSiteTank.jpg`
-                    : `/blog/internship-hunt/cover-photo.jpg`}
+                  src={getCoverImagePath(post.slug)}
                   alt={`Cover image for ${post.title}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
