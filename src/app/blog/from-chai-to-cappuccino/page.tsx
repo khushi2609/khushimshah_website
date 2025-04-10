@@ -103,7 +103,7 @@ To sum it all up, yes, making a new land your home is tough, very tough. There a
 <br></br><br></br>With my family here, we celebrated finding a decent Indian grocery store with a feast. We celebrated surviving midterms with a movie marathon and copious amounts of popcorn. We celebrated every birthday, every holiday, every little victory with laughter, food, and the sheer joy of being together. <b><i>We celebrated the small things because they were the building blocks of our new life, the tiny moments that turned a strange land into a home. And maybe, just maybe, that&apos;s the biggest win of all.</i></b>
 <br></br>
 <br></br>
-<i>P.S. These photos are piece of my heart and I couldnt resist sharing them </i>
+<i>P.S. These photos are piece of my heart and I could not resist sharing them. </i>
 </p>
         </article>
       </div>
