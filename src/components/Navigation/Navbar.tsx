@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaLinkedin, FaBlog } from 'react-icons/fa';
+import { FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -97,12 +97,13 @@ export default function Navbar() {
                 <FaLinkedin className="h-6 w-6" />
               </a>
               <a
-                href="https://shahkhushimitesh.blogspot.com/"
+                href="https://drive.google.com/file/d/1WqHuGttc0JLKSc-yyoyngl1pTjgl4X5t/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-accent"
+                aria-label="Resume"
               >
-                <FaBlog className="h-6 w-6" />
+                <FaFilePdf className="h-6 w-6" />
               </a>
             </div>
           </div>

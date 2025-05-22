@@ -13,11 +13,18 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    slug: 'jmrc-hohenfels-germany',
-    title: 'Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany',
-    excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
-    date: 'December 2023',
-    readTime: '8 min read',
+    slug: 'the-smiling-juggler',
+    title: 'The Smiling Juggler: Balancing Post-Grad Pressure and Family Fun',
+    excerpt: 'Handling a dual-boot brain: switching between enjoying family time and being in job-hunt overdrive', 
+    date: 'May 2025',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'from-chai-to-cappuccino',
+    title: 'From Chai to Cappuccino: My Hilarious, Heartwarming (and Slightly Tipsy) US Adventure so far',
+    excerpt: 'Navigating the cultural shifts and personal growth from India to the US, one cup at a time.',
+    date: 'April 2025',
+    readTime: '10 min read',
   },
   {
     slug: 'Internship-Hunt',
@@ -27,18 +34,19 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
   },
   {
-    slug: 'from-chai-to-cappuccino',
-    title: 'From Chai to Cappuccino: My Hilarious, Heartwarming (and Slightly Tipsy) US Adventure so far',
-    excerpt: 'Navigating the cultural shifts and personal growth from India to the US, one cup at a time.',
-    date: 'April 2025',
-    readTime: '10 min read',
+    slug: 'jmrc-hohenfels-germany',
+    title: 'Exploring Military Innovations: My Trip to JMRC in Hohenfels, Germany',
+    excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
+    date: 'December 2023',
+    readTime: '8 min read',
   },
-  // Add more blog posts here as you create them
 ];
 
 export default function BlogPage() {
   const getCoverImagePath = (slug: string) => {
     switch (slug) {
+      case 'the-smiling-juggler':
+        return '/blog/the-smiling-juggler/coverphoto.jpg';
       case 'jmrc-hohenfels-germany':
         return '/blog/jmrc/PolandSiteTank.jpg';
       case 'Internship-Hunt':
