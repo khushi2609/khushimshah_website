@@ -11,8 +11,9 @@ interface BlogPost {
   readTime: string;
 }
 
-const blogPosts: BlogPost[] = [
+const blogPosts: BlogPost[] = [  
   {
+<<<<<<< HEAD
     slug: 'the-smiling-juggler',
     title: 'The Smiling Juggler: Balancing Post-Grad Pressure and Family Fun',
     excerpt: 'Handling a dual-boot brain: switching between enjoying family time and being in job-hunt overdrive', 
@@ -20,6 +21,8 @@ const blogPosts: BlogPost[] = [
     readTime: '7 min read',
   },
   {
+=======
+>>>>>>> origin/main
     slug: 'from-chai-to-cappuccino',
     title: 'From Chai to Cappuccino: My Hilarious, Heartwarming (and Slightly Tipsy) US Adventure so far',
     excerpt: 'Navigating the cultural shifts and personal growth from India to the US, one cup at a time.',
@@ -39,7 +42,12 @@ const blogPosts: BlogPost[] = [
     excerpt: 'A firsthand account of my experience at the Joint Multinational Readiness Center.',
     date: 'December 2023',
     readTime: '8 min read',
+<<<<<<< HEAD
   },
+=======
+  }
+ 
+>>>>>>> origin/main
 ];
 
 export default function BlogPage() {
