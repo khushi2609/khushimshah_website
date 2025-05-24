@@ -20,6 +20,22 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 'voice-ai-cyber-risk',
+    title: 'Voice AI for Cyber Risk Assessment',
+    description: 'Voice-driven AI system that conducts end-to-end cybersecurity risk assessments for organizations and generates structured, insurable risk reports.',
+    technologies: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'OpenAI APIs', 'Whisper API', 'GPT-4o', 'Multi-Agent Architecture'],
+    achievements: [
+      'Reduced manual assessment time from 1.5 hours to under 15 minutes',
+      'Built conversational AI system using OpenAI Real-Time APIs',
+      'Implemented multi-agent architecture for modular security domains',
+      'Created voice-only interface for accessibility and ease of use',
+      'Generated structured PDF reports for insurer review',
+      'Enabled faster underwriting decisions with structured risk data',
+      'Managed full project lifecycle as Operations Manager'
+    ],
+    status: 'completed'
+  },
+  {
     id: 'soc-implementation',
     title: 'Security Operations Centre Implementation',
     description: 'Orchestrated the establishment of a cutting-edge SOC center leveraging modern technologies for robust security monitoring and threat intelligence.',
@@ -31,7 +47,7 @@ const projects: Project[] = [
       'Working on OpenCTI and MISP integration for threat intelligence sharing',
       'Enhanced EDR capabilities through Wazuh integration'
     ],
-    status: 'ongoing'
+    status: 'completed'
   },
   {
     id: 'web-server-analysis',

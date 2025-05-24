@@ -18,6 +18,36 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    id: 'risklink-capstone',
+    title: 'Operations Manager - Voice AI for Cyber Risk Assessment',
+    company: 'RiskLink (Capstone Project)',
+    date: 'Spring 2025',
+    location: 'Carnegie Mellon University',
+    description: 'Led a multidisciplinary team in developing a voice-driven AI system for automated cybersecurity risk assessments as part of a capstone project with RiskLink. Managed the full project lifecycle while delivering a production-ready solution that transforms manual risk evaluation processes.',
+    achievements: [
+      'Reduced manual assessment time from 1.5 hours to under 15 minutes',
+      'Managed project lifecycle including sprint planning, stakeholder reviews, and team coordination',
+      'Led integration of OpenAI Real-Time APIs for conversational AI capabilities',
+      'Coordinated frontend, AI, and backend teams for seamless system integration',
+      'Oversaw testing and QA processes for AI conversation accuracy and output consistency',
+      'Delivered structured, insurable risk reports for faster underwriting decisions',
+      'Implemented multi-agent architecture for modular security domain management'
+    ],
+    technologies: [
+      'Next.js 15',
+      'TypeScript',
+      'OpenAI APIs',
+      'Whisper API',
+      'GPT-4o',
+      'Multi-Agent Architecture',
+      'Project Management',
+      'Team Leadership',
+      'Voice AI Development'
+    ],
+    category: 'work',
+    image: '/in-action/risklinkTeam.jpg'
+  },
+  {
     id: 'jmrc-project',
     title: 'Military Innovation Research Project',
     company: 'Joint Multinational Readiness Center (JMRC)',
@@ -189,7 +219,7 @@ export default function InAction() {
               key={experience.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
-              <div className={`${experience.id === 'jmrc-project' || experience.id === 'defcon-involvement' ? 'grid grid-cols-1 md:grid-cols-2 gap-0' : ''}`}>
+              <div>
                 {/* Content Section */}
                 <div className="p-8">
                   <div className="mb-6">
@@ -248,14 +278,13 @@ export default function InAction() {
 
                 {/* Image Section */}
                 {experience.image && (
-                  <div className="relative w-full h-full order-first md:order-last">
+                  <div className="relative w-full aspect-[918/663]">
                     <Image
                       src={experience.image}
                       alt={`${experience.title} image`}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="100vw"
                       quality={100}
-                      priority
                       className="object-cover"
                     />
                   </div>

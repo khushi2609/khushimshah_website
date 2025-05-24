@@ -19,6 +19,7 @@ const skillCategories: SkillCategory[] = [
       { "name": "C++", "description": "Optimizing system performance through efficient memory management and low-level programming for critical security applications." },
       { "name": "SQL", "description": "Designing and optimizing complex database queries for efficient data retrieval and security auditing, ensuring data integrity and confidentiality." },
       { "name": "JavaScript/TypeScript", "description": "Developing interactive and secure web applications, utilizing modern frameworks like React and Angular for enhanced user experience." },
+      { "name": "Next.js", "description": "Building modern React applications with server-side rendering, routing, and optimized performance for enterprise-level web development." },
       { "name": "Shell Scripting", "description": "Automating system administration tasks and security operations for efficient incident response and configuration management." }
     ]
   },
@@ -57,10 +58,20 @@ const skillCategories: SkillCategory[] = [
     "title": "Proficiencies",
     "skills": [
       { "name": "Project Management", "description": "Strategic planning and meticulous execution, ensuring projects are delivered on time and within scope." },
+      { "name": "Operations Management", "description": "Managing full project lifecycles including team coordination, sprint planning, stakeholder reviews, and quality assurance processes for complex technical initiatives." },
       { "name": "Technical Writing", "description": "Crafting clear, concise, and comprehensive documentation tailored for diverse audiences, facilitating knowledge transfer and informed decision-making." },
       { "name": "Team Leadership", "description": "Fostering collaborative environments, empowering team members, and driving collective success through effective coordination and motivation." },
       { "name": "Problem Solving", "description": "Employing rigorous analytical thinking to identify root causes, develop innovative solutions, and mitigate risks effectively." },
       { "name": "Communication", "description": "Building strong relationships and ensuring alignment among stakeholders through clear, persuasive, and empathetic communication." }
+    ]
+  },
+  {
+    "title": "AI & Machine Learning",
+    "skills": [
+      { "name": "OpenAI APIs", "description": "Integrating advanced AI capabilities including GPT-4o for conversational AI and Whisper API for real-time speech recognition in production applications." },
+      { "name": "Multi-Agent Architecture", "description": "Designing and implementing modular AI systems with specialized agents for different domains, enabling scalable and maintainable AI solutions." },
+      { "name": "Voice AI Development", "description": "Building voice-driven applications with real-time speech processing, natural language understanding, and conversational interfaces." },
+      { "name": "AI Report Generation", "description": "Developing automated systems that convert conversational inputs into structured reports and documentation using AI-powered templating and parsing." }
     ]
   }
 ];
