@@ -133,7 +133,7 @@ export default function Home() {
               Connect with Me
             </h2>
             <p className="text-xl text-primary max-w-3xl mx-auto">
-              If you identify with any of the words below, let&apos;s collaborate on making the digital world more secure and privacy-conscious :)
+              Let&apos;s collaborate on making the digital world more secure and privacy-conscious :)
             </p>
           </div>
 
